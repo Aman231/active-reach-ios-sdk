@@ -1,0 +1,14 @@
+# Swift Package Manager build output
+.build/
+Packages/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+
+# macOS noise
+.DS_Store
+
+# Xcode breakpoint UI state
+*.pbxuser
+*.xccheckout
+*.moved-aside

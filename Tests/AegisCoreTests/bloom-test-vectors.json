@@ -1,0 +1,16 @@
+{
+  "_comment": "Canonical test vectors for the SDK event-governance bloom filter. Pinned to prevent silent Py/JS hash drift. Values are unsigned 32-bit MurmurHash3 x86-32 outputs over the UTF-8 bytes of `input`. Both Python (the server-side platform, via mmh3) and TypeScript (the web SDK, via murmurhash3_x86_32) MUST agree on every row. See the SDK governance design doc §3.2.",
+  "algo": "mmh3_x86_32_km",
+  "seeds": { "s0": 0, "s1": 1 },
+  "encoding": "utf-8",
+  "vectors": [
+    { "input": "product_viewed",   "mmh3_s0": 1591224403, "mmh3_s1":  931180658 },
+    { "input": "cart_item_added",  "mmh3_s0": 2356777818, "mmh3_s1":  950614842 },
+    { "input": "order_placed",     "mmh3_s0": 2864445208, "mmh3_s1": 1975184313 },
+    { "input": "checkout_started", "mmh3_s0": 2244646900, "mmh3_s1":   60362846 },
+    { "input": "identify",         "mmh3_s0": 3967977125, "mmh3_s1": 2811070591 },
+    { "input": "👋",               "mmh3_s0": 1456672195, "mmh3_s1": 1306677087 },
+    { "input": "",                 "mmh3_s0":          0, "mmh3_s1": 1364076727 },
+    { "input": "a",                "mmh3_s0": 1009084850, "mmh3_s1": 1485495528 }
+  ]
+}

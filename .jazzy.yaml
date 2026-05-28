@@ -1,0 +1,77 @@
+module: ActiveReachSDK
+author: Active Reach Intelligence
+author_url: https://active-reach.ai
+github_url: https://github.com/Aman231/active-reach-ios-sdk
+root_url: https://docs.active-reach.ai/developers/sdks/ios-sdk
+
+clean: true
+output: docs/api
+theme: fullwidth
+
+swift_build_tool: spm
+
+xcodebuild_arguments:
+  - -scheme
+  - ActiveReachSDK
+
+documentation: "*.md"
+
+custom_categories:
+  - name: Core SDK
+    children:
+      - Aegis
+      - AegisConfig
+      - AegisEvent
+
+  - name: Identity & Sessions
+    children:
+      - IdentityManager
+      - SessionManager
+      - AegisUser
+
+  - name: Data Management
+    children:
+      - EventQueue
+      - Transport
+      - RemoteConfigManager
+
+  - name: Context
+    children:
+      - ContextBuilder
+
+  - name: E-commerce
+    children:
+      - EcommerceTracker
+
+  - name: Consent
+    children:
+      - ConsentManager
+
+  - name: Governance
+    children:
+      - TraitGovernor
+      - NameGovernor
+
+  - name: Push Notifications
+    children:
+      - AegisPushManager
+      - AegisPushTracker
+
+  - name: In-App Messaging
+    children:
+      - AegisInAppManager
+      - InAppCampaign
+      - InAppModal
+      - InAppBanner
+
+  - name: Notification Service
+    children:
+      - NotificationService
+
+exclude:
+  - "Tests/*"
+  - "**/*Tests.swift"
+
+min_acl: public
+skip_undocumented: false
+hide_documentation_coverage: false
